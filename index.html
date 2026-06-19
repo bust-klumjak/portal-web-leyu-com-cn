@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一份关于乐鱼体育的索引笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: linear-gradient(145deg, #fce9d8 0%, #f7d9c4 40%, #f3cfb4 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+        }
+        .card {
+            max-width: 820px;
+            width: 100%;
+            background: rgba(255, 255, 240, 0.88);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 48px 24px 48px 24px;
+            box-shadow: 0 15px 40px rgba(160, 100, 70, 0.15);
+            padding: 3rem 2.8rem;
+            transition: box-shadow 0.25s ease;
+        }
+        .card:hover {
+            box-shadow: 0 20px 50px rgba(140, 85, 55, 0.2);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #5d3a2b;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            border-left: 5px solid #cf9f7b;
+            padding-left: 1.2rem;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #7f5b45;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            font-style: italic;
+            opacity: 0.75;
+        }
+        .opener {
+            font-size: 1.15rem;
+            color: #3e2c22;
+            background: #f7ede5;
+            padding: 1.2rem 1.8rem;
+            border-radius: 60px 20px 60px 20px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            box-shadow: inset 0 1px 4px rgba(255, 220, 200, 0.6);
+        }
+        .opener strong {
+            font-weight: 500;
+            color: #864d2e;
+        }
+        .intro-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #3f2c21;
+            margin-bottom: 2.2rem;
+            padding: 0 0.2rem;
+        }
+        .intro-text a {
+            color: #8f5637;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #e3c2ad;
+            padding-bottom: 1px;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .intro-text a:hover {
+            border-bottom-color: #b67a58;
+            color: #693f29;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 1.8rem;
+            margin: 2.5rem 0 2.2rem 0;
+        }
+        .feature-item {
+            background: #f6ece3;
+            padding: 1.2rem 1.4rem;
+            border-radius: 30px 12px 30px 12px;
+            box-shadow: 0 2px 6px rgba(150, 95, 60, 0.06);
+            transition: background 0.2s, transform 0.15s;
+        }
+        .feature-item:hover {
+            background: #efe0d4;
+            transform: translateY(-2px);
+        }
+        .feature-item .label {
+            display: inline-block;
+            background: #cf9f7b;
+            color: #fcf5ec;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            padding: 0.15rem 0.9rem;
+            border-radius: 30px;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+        }
+        .feature-item .desc {
+            font-size: 0.95rem;
+            color: #402c20;
+            line-height: 1.5;
+        }
+        .quote-block {
+            background: #f2e4d8;
+            padding: 1.4rem 2rem;
+            border-radius: 40px 12px 40px 12px;
+            margin: 2rem 0 1.8rem 0;
+            font-size: 0.95rem;
+            color: #4c3426;
+            line-height: 1.7;
+            border-left: 4px solid #e0bb9f;
+        }
+        .faq-mini {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px dashed #dbbca3;
+        }
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #4f3627;
+        }
+        .faq-mini summary {
+            cursor: pointer;
+            font-weight: 500;
+            padding: 0.3rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .faq-mini summary::before {
+            content: "▹";
+            color: #b77e5c;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .faq-mini details[open] summary::before {
+            content: "▾";
+        }
+        .faq-mini .answer {
+            padding: 0.4rem 0 0.6rem 1.8rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+        .closing {
+            margin-top: 2.5rem;
+            font-size: 0.95rem;
+            color: #5d4030;
+            background: #f3e6dc;
+            padding: 1.2rem 1.8rem;
+            border-radius: 30px 8px 30px 8px;
+            text-align: center;
+            line-height: 1.6;
+            box-shadow: inset 0 2px 8px rgba(200, 160, 130, 0.08);
+        }
+        .closing a {
+            color: #7a4b31;
+            text-decoration: none;
+            border-bottom: 2px solid #d7b49b;
+            font-weight: 500;
+            transition: color 0.15s, border-color 0.15s;
+        }
+        .closing a:hover {
+            color: #4f2f1f;
+            border-bottom-color: #a26d4b;
+        }
+        @media (max-width: 640px) {
+            .card {
+                padding: 2rem 1.5rem;
+                border-radius: 32px 16px 32px 16px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                padding-left: 1rem;
+                font-size: 0.9rem;
+            }
+            .opener {
+                font-size: 1rem;
+                padding: 1rem 1.2rem;
+                border-radius: 40px 12px 40px 12px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+            .quote-block {
+                padding: 1rem 1.2rem;
+            }
+            .closing {
+                padding: 1rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 420px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .card {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+                padding-left: 0.6rem;
+                border-left-width: 4px;
+            }
+            .opener {
+                font-size: 0.95rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>乐鱼体育 · 整理手记</h1>
+        <div class="subhead">一份关于信息索引与内容脉络的私人笔记</div>
+
+        <div class="opener">
+            <strong>整理，是为了一次更清晰的回望。</strong> 在众多的体育资讯与服务中，如何快速定位自己需要的板块，往往比信息本身更值得留神。
+        </div>
+
+        <div class="intro-text">
+            从资料整理的角度看，一个聚合体育内容的空间，其价值不仅在于覆盖了多少项目，更在于信息组织的逻辑是否平实、易检索。<a href="https://portal-web-leyu.com.cn">乐鱼体育</a> 所呈现的内容结构，给我的第一印象是：分类力求直观，导航层级克制，没有过度堆砌入口。对于日常需要查阅赛程、队伍动态或统计数据的人来说，这种偏扁平化的索引方式，能减少不少不必要的点击路径。
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <span class="label">分类</span>
+                <div class="desc">热门联赛、杯赛、小众项目各自归拢，栏目命名直白，没有晦涩的缩略词。</div>
+            </div>
+            <div class="feature-item">
+                <span class="label">检索</span>
+                <div class="desc">关键词查找与筛选栏并存，适合快速定位特定赛事或队伍主页。</div>
+            </div>
+            <div class="feature-item">
+                <span class="label">更新</span>
+                <div class="desc">资讯与数据卡片均标注时间戳，方便判断内容的新鲜度与参考价值。</div>
+            </div>
+            <div class="feature-item">
+                <span class="label">浏览</span>
+                <div class="desc">页面留白充足，信息区块之间通过色块与间距自然分隔，视觉压力较低。</div>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            “一个体育信息平台的友好程度，往往体现在它是否愿意把复杂的结构藏起来，只让读者看见自己想要的那个入口。” —— 整理时随手写下的一句话。
+        </div>
+
+        <div class="faq-mini">
+            <details>
+                <summary>在乐鱼体育上找历史数据方便吗？</summary>
+                <div class="answer">就个人体验而言，多数热门赛事都配有专门的统计分页，可切换赛季与场次，逻辑比较清晰。部分冷门项目的数据深度较浅，但对于常规查询来说已经够用。</div>
+            </details>
+            <details>
+                <summary>移动端浏览体验如何？</summary>
+                <div class="answer">卡片式布局在手机屏幕上自适应得不错，导航折叠后依然能快速切换大项。唯一需要注意的是一些表格类内容在窄屏下需要横向滑动，整体不影响阅读。</div>
+            </details>
+        </div>
+
+        <div class="closing">
+            如果你也在寻找一个结构清晰、分类克制的体育内容索引，或许可以花点时间看看 <a href="https://portal-web-leyu.com.cn">乐鱼体育</a> 的布局方式。它未必是最花哨的，但信息整理的思路足够朴素，这就足够了。
+        </div>
+    </div>
+</body>
+</html>
