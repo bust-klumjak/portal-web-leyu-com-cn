@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 leyu 的一个侧面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.7;
+            padding: 0 1.5rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 0 4rem;
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 3.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 2.5rem;
+        }
+
+        .hero-tag {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: #9ca3af;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 450;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            color: #111827;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #4b5563;
+            max-width: 600px;
+        }
+
+        /* 正文区域 */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e293b;
+            margin-bottom: 0.9rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        .section p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #374151;
+            text-align: justify;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用 / 叙述隔断 */
+        .inset-quote {
+            margin: 1.8rem 0;
+            padding: 1.2rem 1.8rem;
+            background-color: #f1f5f9;
+            border-left: 4px solid #d1d5db;
+            font-size: 0.95rem;
+            color: #475569;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .inset-quote strong {
+            font-weight: 500;
+            color: #1e293b;
+        }
+
+        /* 页脚提示 */
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .footer-note a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px dotted #93c5fd;
+            transition: border-color 0.2s ease;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 1px solid #2563eb;
+        }
+
+        .footer-meta {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.02em;
+        }
+
+        /* 小卡片：特点摘要 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.8rem 0;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .feature-item .num {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 550px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-note {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            body {
+                padding: 0 1rem;
+            }
+
+            .page {
+                padding: 2rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <div class="hero-tag">· 一个侧面</div>
+            <h1>leyu 并不遥远，<br>它更像一个安静的站台</h1>
+            <p>没有夸张的霓虹，也没有拥挤的入口。你只需要知道它在那里，然后按自己的节奏走过去。</p>
+        </header>
+
+        <div class="section">
+            <h2>起初只是名字</h2>
+            <p>很多人第一次看到 leyu 的时候，会下意识念出声来——四个字母，轻巧，像一截短句。没有复杂的后缀，没有刻意解释的缩写。它就是一个站点的名字，干净地待在浏览器地址栏里。后来慢慢发现，名字背后是一个有自己逻辑的空间：有内容，有交互，也有沉静的秩序。它不需要在第一时间抓住所有目光，但如果你愿意多停留一会，会察觉到它被仔细安排过。</p>
+            <p>这种安排不是那种扑面而来的设计，而是一种克制的功能分布。首页不堆砌弹窗，导航栏不追逐视线。每个模块之间的留白足够宽，像在提醒你：不必着急，慢慢看。</p>
+        </div>
+
+        <div class="inset-quote">
+            <strong>一个习惯性的比喻：</strong> 如果网络世界是一排亮着灯的窗口，leyu 就是其中一扇没有挂招牌、但永远开着半扇帘子的窗户。你推门进去，里面的人只是抬头看你一眼，然后继续做自己的事——但如果你需要问路，他们会停下来。
+        </div>
+
+        <div class="section">
+            <h2>不止是界面，还有节奏</h2>
+            <p>在使用过程中，最直接的感受是节奏感。页面加载很快，跳转不拖沓，说明在代码层面有清晰的优化意识。更重要的是内容排布的逻辑：重要的信息放在前面，但不吵闹；次要的内容折叠在二级页面里，但不隐蔽。一切都是可预料的，没有那种“点进去才发现不是自己想要的”的失落。</p>
+            <p>从另一个角度看，这种节奏也体现在维护的持续性上。不定期更新，功能微调，但从不突然改头换面。对于一个长期使用的站点来说，熟悉感本身就是一种信任。</p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="num">01</span>
+                    <h3>结构干净</h3>
+                    <p>层级清晰，不靠铺满来制造丰富感。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="num">02</span>
+                    <h3>响应及时</h3>
+                    <p>操作反馈轻快，没有多余的等待动画。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="num">03</span>
+                    <h3>信息可读</h3>
+                    <p>字号、行距、对比度都偏向纸媒的阅读习惯。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="num">04</span>
+                    <h3>克制迭代</h3>
+                    <p>变化有痕迹，但不推翻重来，保留用户的肌肉记忆。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>可信来自日常</h2>
+            <p>信任感往往不是来自某一次华丽的改版，而是来自无数次无摩擦的访问。当你连续几周都通过 <a href="https://www--leyu.com">leyu</a> 完成自己的事情，渐渐就不再注意它的设计细节——因为一切都恰到好处地退到了背景里。这种“透明感”其实是最难做到的，它意味着没有一处按钮让你困惑，没有一行文案让你怀疑。</p>
+            <p>从站点介绍的角度来说，leyu 并不需要一篇长长的说明文档来证明自己。它的可信度写在每一次稳定的响应里，写在不打扰用户的克制里。如果你习惯用直觉判断一个站点是否可靠，那么 leyu 很可能在第一分钟就通过了你的测试。</p>
+        </div>
+
+        <div class="footer-note">
+            <span>如果你愿意，现在可以直接去 <a href="https://www--leyu.com">leyu</a> 看一看。</span>
+            <span class="footer-meta">保持简单 · 保持距离</span>
+        </div>
+    </div>
+</body>
+</html>
