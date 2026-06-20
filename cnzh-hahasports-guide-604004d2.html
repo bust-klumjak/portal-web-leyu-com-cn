@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>哈哈体育 · 持续关注·知识型体育平台</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f7fcfb;
+      color: #1b2e35;
+      line-height: 1.45;
+      padding: 0 1.2rem;
+    }
+
+    .page-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 0 3.5rem;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2.4rem 0 2.8rem;
+      border-bottom: 1px solid #c7e4de;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #0a3b44;
+      line-height: 1.2;
+    }
+
+    .hero h1 i {
+      font-style: normal;
+      background: linear-gradient(145deg, #128577 0%, #31a892 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 680px;
+      color: #2b4e56;
+    }
+
+    .hero .meta-tag {
+      display: inline-block;
+      background: #d5efea;
+      color: #0f564a;
+      border-radius: 40px;
+      padding: 0.2rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- 优势网格卡片 ---------- */
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 2.8rem 0 1.2rem;
+      color: #124a4a;
+      border-left: 5px solid #31a892;
+      padding-left: 1rem;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .grid-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.3rem 0.9rem 1rem;
+      box-shadow: 0 4px 14px rgba(0, 50, 45, 0.03);
+      border: 1px solid #d2eae3;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .grid-card:hover {
+      box-shadow: 0 6px 18px rgba(18, 133, 119, 0.08);
+    }
+
+    .grid-card .emoji-badge {
+      font-size: 1.7rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .grid-card h3 {
+      font-size: 1.05rem;
+      font-weight: 520;
+      color: #12524f;
+      margin-bottom: 0.15rem;
+    }
+
+    .grid-card p {
+      font-size: 0.85rem;
+      color: #3f5d62;
+      line-height: 1.4;
+    }
+
+    /* ---------- 说明区 / 段落承接 ---------- */
+    .explain-section {
+      background: white;
+      border-radius: 28px;
+      padding: 1.8rem 1.6rem;
+      margin: 2.2rem 0 2rem;
+      border: 1px solid #cae3dc;
+      box-shadow: 0 2px 12px rgba(0, 60, 50, 0.02);
+    }
+
+    .explain-section p {
+      margin-bottom: 1.2rem;
+      font-size: 0.98rem;
+    }
+
+    .explain-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-link {
+      color: #0a7b68;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dashed #73b9ab;
+      transition: border-color 0.2s, color 0.1s;
+    }
+
+    .highlight-link:hover {
+      color: #0b5e52;
+      border-bottom: 1px solid #0b5e52;
+    }
+
+    .blue-dot-list {
+      list-style: none;
+      margin: 0.6rem 0 1rem;
+    }
+
+    .blue-dot-list li {
+      padding: 0.3rem 0 0.2rem 1.4rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .blue-dot-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #239882;
+      font-weight: 600;
+    }
+
+    /* ---------- FAQ 摘要 ---------- */
+    .faq-summary {
+      background: #eef8f5;
+      border-radius: 24px;
+      padding: 1.6rem 1.6rem 1.2rem;
+      margin: 1.8rem 0;
+    }
+
+    .faq-summary h3 {
+      font-size: 1.15rem;
+      font-weight: 540;
+      color: #084a43;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .faq-item {
+      margin-bottom: 0.7rem;
+    }
+
+    .faq-q {
+      font-weight: 520;
+      color: #065246;
+      font-size: 0.96rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #2c5256;
+      margin-top: 0.15rem;
+      padding-left: 0.2rem;
+    }
+
+    .faq-a a {
+      color: #077560;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #74bba9;
+    }
+
+    .faq-a a:hover {
+      color: #053f38;
+    }
+
+    /* ---------- 底部链接 ---------- */
+    .bottom-links {
+      margin-top: 2.6rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #cee6df;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+
+    .bottom-links .footnote {
+      font-size: 0.85rem;
+      color: #4b6e72;
+    }
+
+    .bottom-links .footnote a {
+      color: #0e6b5b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .bottom-links .footnote a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom-stamp {
+      font-size: 0.8rem;
+      color: #70998e;
+    }
+
+    /* ---------- 响应式微调 ---------- */
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+      .grid-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+      }
+      .explain-section {
+        padding: 1.3rem 1rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <span class="meta-tag">知识型 · 持续关注</span>
+    </div>
+    <h1>再次回到 <i>哈哈体育</i> · 理解运动叙事</h1>
+    <p>体育不只比分与赛程，更包含技战术脉络、文化背景与历史对照。当您将 <strong>哈哈体育</strong> 加入收藏，每次访问都是一次深度浏览。</p>
+  </div>
+
+  <!-- 优势网格卡片 -->
+  <h2 class="section-title">为什么值得持续关注</h2>
+  <div class="grid-cards">
+    <div class="grid-card">
+      <span class="emoji-badge">🧠</span>
+      <h3>分析视角</h3>
+      <p>赛事解读基于数据与逻辑，不依赖情绪。提供可追溯的论点。</p>
+    </div>
+    <div class="grid-card">
+      <span class="emoji-badge">📚</span>
+      <h3>专题归档</h3>
+      <p>联赛、杯赛、运动项目拆解，方便反复查阅与对比。</p>
+    </div>
+    <div class="grid-card">
+      <span class="emoji-badge">🔖</span>
+      <h3>收藏友好</h3>
+      <p>结构清晰、加载轻量，适合长期放在书签栏随时回看。</p>
+    </div>
+    <div class="grid-card">
+      <span class="emoji-badge">🌐</span>
+      <h3>跨项目覆盖</h3>
+      <p>足球、篮球、网球、综合格斗等，均保持统一的叙述节奏。</p>
+    </div>
+  </div>
+
+  <!-- 说明区 (承上启下 + 嵌入链接) -->
+  <div class="explain-section">
+    <p>
+      许多体育内容平台追求即时刷新，但信息过载反而干扰判断。<strong>哈哈体育</strong> 选择另一种节奏——将每轮比赛、每段转会、每项规则变化，放入更长的上下文。如果您已经收藏过这个站点，再次访问时会发现内容之间的关联比想象中紧密。
+    </p>
+    <p>
+      例如某个联赛的战术演变，可能从三年前的阵容调整开始梳理；而一支球队的建队哲学，往往在多个赛季的报道中渐进呈现。为了不错过这些脉络，将 <a href="https://cnzh-hahasports.com" class="highlight-link">哈哈体育</a> 存入书签或设为常用标签页，是保持信息连续性的实用习惯。
+    </p>
+    <p>
+      同时平台保持克制更新：不重复搬运快讯，不追逐无意义热搜。每篇文章的目标是让您离开页面后，仍能用自己的话讲清楚一个体育话题。
+    </p>
+
+    <ul class="blue-dot-list">
+      <li>完整比赛报告附带可视化数据（预期进球、控图、投篮热区）</li>
+      <li>运动员与教练专题：成长路径、关键比赛复盘</li>
+      <li>规则解读与历史冷知识，丰富观赛体验</li>
+    </ul>
+    <p style="margin-bottom: 0; font-style: italic; color: #3c6761;">
+      每次回来，都像翻开一本体育笔记的续篇。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h3>❓ 常见问题 · 摘要</h3>
+    <div class="faq-item">
+      <div class="faq-q">“哈哈体育”内容偏向哪些运动？</div>
+      <div class="faq-a">覆盖主流职业联赛（足球五大联赛、NBA、欧冠、网球大满贯等），同时包含部分新兴项目与女子体育专题。具体可在站内按标签筛选。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">内容更新频率如何？</div>
+      <div class="faq-a">每周 3–5 篇深度文章，重大赛事期间会增加赛前预览与赛后分析。不追求日更数量，保证每篇可读性。建议收藏 <a href="https://cnzh-hahasports.com">哈哈体育</a> 后定期浏览。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">是否有互动或评论功能？</div>
+      <div class="faq-a">当前以单向阅读为主，部分文章底部可提交观点。未来计划开放用户专栏与讨论区，该功能开发进度会在站内公告。</div>
+    </div>
+    <div style="font-size: 0.8rem; color: #3d6b64; margin-top: 0.4rem;">更多详细说明请直接浏览站点。</div>
+  </div>
+
+  <!-- footer / 底部链接 -->
+  <div class="bottom-links">
+    <div class="footnote">
+      <a href="https://cnzh-hahasports.com">哈哈体育</a> · 知识型运动平台
+    </div>
+    <div class="bottom-stamp">
+      持续关注 · 理性叙说
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
